@@ -65,6 +65,7 @@ spec:
       command:
         - /kaniko/executor
       args:
+        - --force
         - --dockerfile=$(params.pathToDockerFile)
         - --destination=$(resources.outputs.builtImage.url)
         - --context=$(params.pathToContext)
